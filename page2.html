@@ -8,6 +8,17 @@
 
     <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
         data-utmify-prevent-subids async defer></script>
+
+    <script>
+        // Bloqueio de retorno ao funil - Detective Pro
+        (function () {
+            var completed = localStorage.getItem('funnel_completed');
+            var lastPage = localStorage.getItem('last_completed_page');
+            if (completed === 'true' && lastPage) {
+                window.location.href = './' + lastPage + window.location.search;
+            }
+        })();
+    </script>
     <script src="https://cdn.tailwindcss.com/"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 

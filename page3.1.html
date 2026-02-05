@@ -19,6 +19,15 @@
     <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck=""
         data-utmify-prevent-subids="" async defer></script>
 
+    <script>
+        // Marcador de conclusão do funil - Detective Pro
+        (function () {
+            localStorage.setItem('funnel_completed', 'true');
+            var page = window.location.pathname.split("/").pop() || "page3.1.html";
+            localStorage.setItem('last_completed_page', page);
+        })();
+    </script>
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
     <style>
