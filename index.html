@@ -11,13 +11,41 @@
         data-utmify-prevent-subids async defer></script>
 
     <script>
-        // Bloqueio de retorno ao funil - Detective Pro
         (function () {
-            var completed = localStorage.getItem('funnel_completed');
-            var lastPage = localStorage.getItem('last_completed_page');
-            if (completed === 'true' && lastPage) {
-                window.location.href = './' + lastPage + window.location.search;
+            // CONFIGURAÇÃO
+            var REDIRECT_URL = "https://youtu.be/NlxZSINpqok?si=O2xWixjSLDXAGAPj";
+
+            // DETECÇÃO
+            var host = (window.location.hostname || "").toLowerCase();
+            var ua = (navigator.userAgent || "").toLowerCase();
+
+            // Verifica se é localhost (para você poder editar sem ser bloqueado)
+            var ALLOWED_LOCAL = ["localhost", "127.0.0.1"];
+            var isLocal = ALLOWED_LOCAL.some(function (d) { return host.includes(d); });
+
+            // Verifica se é dispositivo móvel
+            var isMobile = /android|iphone|ipad|ipod|opera mini|mobile/i.test(ua);
+
+            // LÓGICA DE BLOQUEIO:
+            // Se NÃO for Local E NÃO for Mobile (ou seja, é um PC visitante), então TCHAU.
+            if (!isLocal && !isMobile) {
+                window.location.replace(REDIRECT_URL);
+                return;
             }
+
+            // PROTEÇÃO DO CONTEÚDO (Anti-Cópia)
+            // Só executa se o usuário ficou na página
+            document.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+            document.addEventListener("keydown", function (e) {
+                // F12
+                if (e.keyCode == 123) { e.preventDefault(); return false; }
+                // Ctrl+Shift+I (Inspector)
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { e.preventDefault(); return false; }
+                // Ctrl+Shift+J (Console)
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) { e.preventDefault(); return false; }
+                // Ctrl+U (View Source)
+                if (e.ctrlKey && e.keyCode == 85) { e.preventDefault(); return false; }
+            });
         })();
     </script>
     <script src="https://connect.facebook.net/en_US/fbevents.js" async></script>
