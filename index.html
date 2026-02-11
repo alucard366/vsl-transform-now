@@ -3,34 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <script>
-        (function () {
-            var REDIRECT_URL = "https://youtu.be/NlxZSINpqok?si=O2xWixjSLDXAGAPj";
-            var ALLOWED_LOCAL = ["localhost", "127.0.0.1"];
-            var host = (window.location.hostname || "").toLowerCase();
-            var ref = (document.referrer || "").toLowerCase();
-            var ua = (navigator.userAgent || "").toLowerCase();
-            var qs = (window.location.search || "").toLowerCase();
-            var isLocal = ALLOWED_LOCAL.some(function (d) { return host.includes(d); });
-            var fromMetaRef = ref.includes("facebook.com") || ref.includes("instagram.com") || ref.includes("l.facebook.com") || ref.includes("lm.facebook.com");
-            var hasFbclid = qs.includes("fbclid=");
-            var hasUtm = qs.includes("utm_source=facebook") || qs.includes("utm_source=instagram");
-            var uaMeta = ua.includes("fbav") || ua.includes("fban") || ua.includes("instagram") || ua.includes("facebook");
-            var isMobile = /android|iphone|ipad|ipod|opera mini|mobile/i.test(ua);
-            try {
-                if (window.top !== window.self) { window.top.location.replace(REDIRECT_URL); return; }
-            } catch (e) { window.location.replace(REDIRECT_URL); return; }
-            var allowed = isLocal || (isMobile && (fromMetaRef || hasFbclid || hasUtm || uaMeta));
-            if (!allowed) { window.location.replace(REDIRECT_URL); return; }
-            document.addEventListener("contextmenu", function (e) { e.preventDefault(); });
-            document.addEventListener("keydown", function (e) {
-                if (e.key === "F12") e.preventDefault();
-                if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) e.preventDefault();
-                if (e.ctrlKey && (e.key === "U" || e.key === "S")) e.preventDefault();
-                if ((e.metaKey && e.key === "u") || (e.metaKey && e.key === "s")) e.preventDefault();
-            });
-        })();
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Página de Investigação - d24</title>
 
