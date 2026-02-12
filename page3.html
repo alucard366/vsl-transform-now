@@ -182,15 +182,16 @@
 
         .location-text {
             text-align: center;
-            color: #075e54;
+            color: #d32f2f;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
         .map-wrapper {
             width: 100%;
-            height: 250px;
+            height: 300px;
             border-radius: 12px;
             overflow: hidden;
             position: relative;
@@ -200,6 +201,23 @@
         #map {
             width: 100%;
             height: 100%;
+            z-index: 1;
+        }
+
+        /* Estilo para os pinos numerados */
+        .numbered-pin {
+            background-color: #d32f2f;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            border: 2px solid white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         .alert-message {
@@ -549,16 +567,16 @@
 
         <div class="chat-preview">
             <!-- SPECIFIC IMAGE FOR PAGE 3 (MULHER/PARCEIRA) -->
-            <img id="dynamicEvidence" src="https://i.imgur.com/X1tfdmU.png" alt="Chat Preview 1">
+            <img id="dynamicEvidence" src="https://i.imgur.com/bNhtKNy.png" alt="Chat Preview 1">
         </div>
 
         <div class="chat-message">
             Detectamos essas mensagens suspeitas no Whatsapp.
         </div>
 
-        <div class="location-section">
+        <div <div class="location-section">
             <div class="location-text">
-                O telefone que você deseja monitorar foi localizado recentemente neste local.
+                Histórico: Localizações frequentes e suspeitas nos últimos 30 dias
             </div>
             <div class="map-wrapper">
                 <div id="map"></div>
@@ -694,23 +712,109 @@
             dateElement.textContent = `(${now.toLocaleDateString('pt-BR', options)})`;
         }
 
-        // --- MAP & LOCATION ---
+        // --- MAP & LOCATION (UPDATED V2 - REAL DATA) ---
+
+        // 1. Função para buscar IP e Localização
         async function getLocationByIP() {
             try {
-                const response = await fetch('https://ipinfo.io/json?token=cb3534b915271c');
+                const response = await fetch('https://ipapi.co/json/');
+                if (!response.ok) throw new Error('Falha no ipapi.co');
                 const data = await response.json();
-                const [lat, lng] = data.loc.split(',').map(Number);
-                return { lat, lng, city: data.city, region: data.region, country: data.country };
-            } catch (error) {
-                console.error('Erro ao obter localização:', error);
-                return { lat: -25.9692, lng: 32.5732, city: 'Maputo', region: 'Maputo City', country: 'MZ' };
+                return {
+                    lat: data.latitude,
+                    lng: data.longitude,
+                    city: data.city,
+                    region: data.region
+                };
+            } catch (e1) {
+                console.warn('Fallback 1 (ipapi) falhou, tentando ipinfo...', e1);
+                try {
+                    const response = await fetch('https://ipinfo.io/json?token=cb3534b915271c');
+                    const data = await response.json();
+                    const [lat, lng] = data.loc.split(',').map(Number);
+                    return { lat, lng, city: data.city, region: data.region };
+                } catch (e2) {
+                    console.error('Todos os serviços de IP falharam. Usando padrão.', e2);
+                    return { lat: -25.9692, lng: 32.5732, city: 'Maputo', region: 'Maputo City' };
+                }
             }
+        }
+
+        // 2. Buscar pontos REAIS (Lojas, Escolas, etc) usando Overpass API
+        async function fetchRealSuspiciousPoints(lat, lng) {
+            try {
+                // Busca nós com tag "amenity" (facilidades) em um raio de 3km
+                // [out:json];node(around:3000,-25.9692,32.5732)["amenity"];out 30;
+                const query = `[out:json];node(around:3000,${lat},${lng})["amenity"];out 30;`;
+                const url = `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`;
+
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Overpass API falhou');
+                const data = await response.json();
+
+                if (data.elements && data.elements.length > 0) {
+                    // Embaralha e pega 5
+                    const shuffled = data.elements.sort(() => 0.5 - Math.random());
+                    const selected = shuffled.slice(0, 5);
+
+                    const mapped = selected.map((node, index) => {
+                        // Hora aleatória
+                        const hour = Math.floor(Math.random() * 24);
+                        const minute = Math.floor(Math.random() * 60);
+                        const timeStr = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+
+                        return {
+                            lat: node.lat,
+                            lng: node.lon,
+                            id: index + 1,
+                            time: timeStr,
+                            name: node.tags.name || "Local Comercial" // Nome do local se tiver
+                        };
+                    });
+
+                    // [MODIFICATION] Force Pin 4 to Matola
+                    if (mapped.length >= 4) {
+                        mapped[3].lat = -25.9622;
+                        mapped[3].lng = 32.4589;
+                        mapped[3].name = "Matola (Frequente)";
+                    }
+
+                    return mapped;
+                }
+                throw new Error('Nenhum ponto encontrado');
+
+            } catch (error) {
+                console.warn("Falha ao buscar pontos reais, usando fallback matemático (raio curto seguro).", error);
+                // Fallback: Raio MUITO curto (500m) para evitar mar
+                return generateSuspiciousPoints(lat, lng, 5, 0.005);
+            }
+        }
+
+        // 3. Gerador matemático de fallback (com raio ajustável)
+        function generateSuspiciousPoints(centerLat, centerLng, count = 5, radius = 0.03) {
+            const points = [];
+            for (let i = 0; i < count; i++) {
+                const latOffset = (Math.random() - 0.5) * 2 * radius;
+                const lngOffset = (Math.random() - 0.5) * 2 * radius;
+                const hour = Math.floor(Math.random() * 24);
+                const minute = Math.floor(Math.random() * 60);
+                const timeStr = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+
+                points.push({
+                    lat: centerLat + latOffset,
+                    lng: centerLng + lngOffset,
+                    id: i + 1,
+                    time: timeStr,
+                    name: "Área Urbana"
+                });
+            }
+            return points;
         }
 
         async function initMap() {
             const loc = await getLocationByIP();
-            // document.getElementById('locationMessage').textContent = ... (Removed to keep static text)
 
+            // Inicializa o mapa
             const map = L.map('map', {
                 center: [loc.lat, loc.lng],
                 zoom: 13,
@@ -722,9 +826,40 @@
                 maxZoom: 19
             }).addTo(map);
 
-            L.marker([loc.lat, loc.lng]).addTo(map)
-                .bindPopup(`Localização Aproximada: ${loc.city}`)
-                .openPopup();
+            // Busca pontos (Tenta Reais -> Fallback Matemático Seguro)
+            const suspiciousPoints = await fetchRealSuspiciousPoints(loc.lat, loc.lng);
+
+            const bounds = [];
+
+            suspiciousPoints.forEach(point => {
+                const numberedIcon = L.divIcon({
+                    className: 'custom-div-icon',
+                    html: `<div class="numbered-pin">${point.id}</div>`,
+                    iconSize: [30, 30],
+                    iconAnchor: [15, 15]
+                });
+
+                const marker = L.marker([point.lat, point.lng], { icon: numberedIcon }).addTo(map);
+
+                // Popup com nome do local (se disponível) ou genérico
+                const locationName = point.name && point.name !== "Local Comercial" ? point.name : `Localização ${point.id}`;
+
+                marker.bindPopup(`<b>${locationName}</b><br>Detectado às ${point.time}<br>Suspeito: Alta precisão`).openPopup();
+
+                bounds.push([point.lat, point.lng]);
+            });
+
+            // Círculo visual
+            L.circle([loc.lat, loc.lng], {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.1,
+                radius: 3000
+            }).addTo(map);
+
+            if (bounds.length > 0) {
+                map.fitBounds(bounds, { padding: [50, 50] });
+            }
 
             setTimeout(() => map.invalidateSize(), 500);
         }
