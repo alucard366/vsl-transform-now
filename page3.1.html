@@ -678,7 +678,8 @@
             </div>
         </div>
 
-        <a href="https://www.ratixpay.site/checkout.html?produto=3OUEG3GI1" class="cta-button">
+        <a href="https://pay.ted.co.mz/checkout/TEDPNJFLK7X" class="cta-button" id="checkoutBtn"
+            onclick="window.location.href='https://pay.ted.co.mz/checkout/TEDPNJFLK7X'; return false;">
             VER TUDO AGORA
         </a>
         <div id="countdownTimer" class="timer-display"
@@ -939,7 +940,7 @@
         window.onload = function () {
             var links = document.getElementsByTagName("a");
             for (var i = 0, n = links.length; i < n; i++) {
-                if (links[i].href.includes('javascript')) continue;
+                if (links[i].href.includes('javascript') || links[i].id === 'checkoutBtn') continue;
                 var href = links[i].href.trim() +
                     (links[i].href.indexOf("?") > 0 ? '&' : '?') +
                     document.location.search.replace('?', '').toString();
