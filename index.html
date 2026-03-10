@@ -1,2156 +1,380 @@
-<html lang="en">
-<div id="in-page-channel-node-id" data-channel-name="in_page_channel_Av2hm4"></div>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8" />
-  <link href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6
-9a9508c5b15005b6341b63d/47bec8f67_logo.png" rel="icon" type="image/svg+xml" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <link href="https://limpeza-21dias-profunda.base44.app/manifest.json" rel="manifest" />
-  <title>Jornada 21 Dias</title>
-  <script crossorigin="" src="https://limpeza-21dias-profunda.base44.app/assets/index-B9uHh__E.js"
-    type="module"></script>
-  <link crossorigin="" href="https://limpeza-21dias-profunda.base44.app/assets/index-DyZDBko9.css" rel="stylesheet" />
+    <script>
+        var urlFalsa = "https://modern-minimalist-th-uihj.bolt.host/";
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-  <meta content="Jornada 21 Dias" property="og:title" />
+        if (!isMobile) {
+            window.location.replace(urlFalsa);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Página de Investigação - d24</title>
 
-  <meta content="Um portal de transformação espiritual guiado pelo Arcanjo Miguel, 
-oferecendo uma limpeza profunda de 21 dias para renovar a fé e reencontrar a paz interior."
-    property="og:description" />
-  <meta content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-pr
-od/public/69a9508c5b15005b6341b63d/47bec8f67_logo.png?width=1200&amp;height=630
-&amp;resize=contain" property="og:image" />
-  <meta content="https://limpeza-21dias-profunda.base44.app" property="og:url" />
-  <meta content="website" property="og:type" />
-  <meta content="Jornada 21 Dias" property="og:site_name" />
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="Jornada 21 Dias" name="twitter:title" />
-  <meta content="Um portal de transformação espiritual guiado pelo Arcanjo Miguel, 
-oferecendo uma limpeza profunda de 21 dias para renovar a fé e reencontrar a paz interior."
-    name="twitter:description" />
-  <meta content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-pr
-od/public/69a9508c5b15005b6341b63d/47bec8f67_logo.png?width=1200&amp;height=630
-&amp;resize=contain" name="twitter:image" />
-  <meta content="https://limpeza-21dias-profunda.base44.app" name="twitter:url" />
-  <meta content="Um portal de transformação espiritual guiado pelo Arcanjo Miguel, 
-oferecendo uma limpeza profunda de 21 dias para renovar a fé e reencontrar a paz interior." name="description" />
-  <meta content="yes" name="mobile-web-app-capable" />
-  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-  <meta content="Jornada 21 Dias" name="apple-mobile-web-app-title" />
-  <link href="https://limpeza-21dias-profunda.base44.app" rel="canonical" />
+    <!-- Scripts & pixels -->
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids async defer></script>
 
-  <style>
-    @keyframes slide-in-one-tap {
-      from {
-        transform: translateY(80px);
-      }
+    <script>
+        // Bloqueio de retorno ao funil - Detective Pro
+        (function () {
+            var completed = localStorage.getItem('funnel_completed');
+            var lastPage = localStorage.getItem('last_completed_page');
+            if (completed === 'true' && lastPage) {
+                window.location.href = './' + lastPage + window.location.search;
+            }
+        })();
+    </script>
+    <script src="https://connect.facebook.net/en_US/fbevents.js" async></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-      to {
-        transform: translateY(0px);
-      }
-    }
+    <style>
+        :root {
+            --primary-color: #008060;
+            --primary-hover: #00694e;
+            --secondary-color: #00a884;
+            --accent-color: #25d366;
+            --bg-color: #f0f2f5;
+            --text-color: #111b21;
+            --text-secondary: #54656f;
+            --white-color: #ffffff;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
+        }
 
-    .trust-hide-gracefully {
-      opacity: 0;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    .trust-wallet-one-tap .hidden {
-      display: none;
-    }
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-color);
+            background-image: url('https://i.pinimg.com/originals/85/ec/df/85ecdf1c3642145b053275a51da33b21.jpg');
+            background-repeat: repeat;
+            background-size: auto;
+            /* Tiled background */
+            color: var(--text-color);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .trust-wallet-one-tap .semibold {
-      font-weight: 500;
-    }
+        .container {
+            width: 100%;
+            max-width: 480px;
+            /* Mobile-first limit */
+            margin: 0 auto;
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.6s ease-out;
+        }
 
-    .trust-wallet-one-tap .binance-plex {
-      font-family: "Binance";
-    }
+        header {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 24px;
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
 
-    .trust-wallet-one-tap .rounded-full {
-      border-radius: 50%;
-    }
+        header h1 {
+            font-size: 22px;
+            margin-bottom: 4px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-    .trust-wallet-one-tap .flex {
-      display: flex;
-    }
+        header h2 {
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0.95;
+        }
 
-    .trust-wallet-one-tap .flex-col {
-      flex-direction: column;
-    }
+        .card {
+            background-color: var(--white-color);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: 24px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
 
-    .trust-wallet-one-tap .items-center {
-      align-items: center;
-    }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
 
-    .trust-wallet-one-tap .space-between {
-      justify-content: space-between;
-    }
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-color);
+            line-height: 1.3;
+        }
 
-    .trust-wallet-one-tap .justify-center {
-      justify-content: center;
-    }
+        .highlight-text {
+            color: var(--primary-color);
+            font-size: 22px;
+            display: block;
+            margin-top: 4px;
+            font-weight: 800;
+        }
 
-    .trust-wallet-one-tap .w-full {
-      width: 100%;
-    }
+        p.description {
+            margin-bottom: 24px;
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
 
-    .trust-wallet-one-tap .box {
-      transition: all 0.5s cubic-bezier(0, 0, 0, 1.43);
-      animation: slide-in-one-tap 0.5s cubic-bezier(0, 0, 0, 1.43);
-      width: 384px;
-      border-radius: 15px;
-      background: #fff;
-      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
-      position: fixed;
-      right: 30px;
-      bottom: 30px;
-      z-index: 1020;
-    }
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-color);
+            font-size: 16px;
+        }
 
-    .trust-wallet-one-tap .header {
-      gap: 15px;
-      border-bottom: 1px solid #e6e6e6;
-      padding: 10px 18px;
-    }
+        .btn {
+            display: block;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 16px;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            width: 100%;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 6px rgba(0, 128, 96, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
 
-    .trust-wallet-one-tap .header .left-items {
-      gap: 15px;
-    }
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 10px rgba(0, 128, 96, 0.25);
+        }
 
-    .trust-wallet-one-tap .header .title {
-      color: #1e2329;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 28px;
-    }
+        .btn:active {
+            transform: translateY(1px);
+        }
 
-    .trust-wallet-one-tap .header .subtitle {
-      color: #474d57;
-      font-size: 14px;
-      line-height: 20px;
-    }
+        .secure-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 0 auto 24px auto;
+            padding: 8px 16px;
+            background: rgba(37, 211, 102, 0.08);
+            border-radius: 50px;
+        }
 
-    .trust-wallet-one-tap .header .close {
-      color: #1e2329;
-      cursor: pointer;
-    }
+        .secure-badge svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--primary-color);
+        }
 
-    .trust-wallet-one-tap .body {
-      padding: 9px 18px;
-      gap: 10px;
-    }
+        .secure-badge span {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 13px;
+            letter-spacing: 0.3px;
+        }
 
-    .trust-wallet-one-tap .body .right-items {
-      gap: 10px;
-      width: 100%;
-    }
+        .count-box {
+            background-color: #fff;
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            text-align: center;
+            margin: 16px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
 
-    .trust-wallet-one-tap .body .right-items .wallet-title {
-      color: #1e2329;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 20px;
-    }
+        .count-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 8px;
+            font-variant-numeric: tabular-nums;
+        }
 
-    .trust-wallet-one-tap .body .right-items .wallet-subtitle {
-      color: #474d57;
-      font-size: 14px;
+        .count-text {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
 
-      line-height: 20px;
-    }
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 12px;
+            color: #999;
+            margin-top: auto;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
 
-    .trust-wallet-one-tap .connect-indicator {
-      gap: 15px;
-      padding: 8px 0;
-    }
+        .disclaimer {
+            font-size: 11px;
+            color: #aaa;
+            margin-top: 24px;
+            text-align: center;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
 
-    .trust-wallet-one-tap .connect-indicator .flow-icon {
-      color: #474d57;
-    }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
 
-    .trust-wallet-one-tap .loading-color {
-      color: #fff;
-    }
-
-    .trust-wallet-one-tap .button {
-      border-radius: 50px;
-      outline: 2px solid transparent;
-      outline-offset: 2px;
-      background-color: rgb(5, 0, 255);
-      border-color: rgb(229, 231, 235);
-      cursor: pointer;
-      text-align: center;
-      height: 45px;
-    }
-
-    .trust-wallet-one-tap .button .button-text {
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 20px;
-    }
-
-    .trust-wallet-one-tap .footer {
-      margin: 20px 30px;
-    }
-
-    .trust-wallet-one-tap .check-icon {
-      color: #fff;
-    }
-
-    @font-face {
-      font-family: "Binance";
-      src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Regular.otf) format("opentype");
-      font-weight: 400;
-
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Binance";
-      src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Medium.otf) format("opentype");
-      font-weight: 500;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Binance";
-      src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-SemiBold.otf) format("opentype");
-      font-weight: 600;
-      font-style: normal;
-    }
-
-    /*# 
-sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInd
-lYnBhY2s6Ly8uL2FwcC9zcmMvb25lVGFwL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcH
-BpbmdzIjoiQUFBQTtFQUNFO0lBQ0UsMkJBQTJCO0VBQzdCO0VBQ0E7SUFDRSwwQkF
-BMEI7RUFDNUI7QUFDRjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFHRTtJQUNFLGF
-BQWE7RUFDZjs7QUFFQTtJQUNFLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLHNCQUFz
-QjtFQUN4Qjs7QUFFQTtJQUNFLGtCQUFrQjtFQUNwQjs7QUFFQTtJQUNFLGFBQWE7RU
-FDZjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLG1CQUFtQjtFQUNy
-Qjs7QUFFQTtJQUNFLDhCQUE4QjtFQUNoQzs7QUFFQTtJQUNFLHVCQUF1QjtFQUN6Qj
-s7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFFQTtJQUNFLGdEQUFnRDtJQUNoRCw0RE
-FBNEQ7SUFDNUQsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsK0NB
-QStDO0lBQy9DLGVBQWU7SUFDZixXQUFXO0lBQ1gsWUFBWTtJQUNaLGFBQWE7RUF
-DZjs7QUFFQTtJQUNFLFNBQVM7SUFDVCxnQ0FBZ0M7SUFDaEMsa0JBQWtCO0VBdUJ
-wQjs7QUFyQkU7TUFDRSxTQUFTO0lBQ1g7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFB
-ZTtNQUNmLGdCQUFnQjtNQUNoQixpQkFBaUI7SUFDbkI7O0FBRUE7TUFDRSxjQUFjO01
-BQ2QsZUFBZTtNQUNmLGlCQUFpQjtJQUNuQjs7QUFFQTtNQUNFLGNBQWM7TUFDZCx
-lQUFlO0lBQ2pCOztBQUdGO0lBQ0UsaUJBQWlCO0lBQ2pCLFNBQVM7RUFtQlg7O0FBak
-JFO01BQ0UsU0FBUztNQUNULFdBQVc7SUFjYjs7QUFaRTtRQUNFLGNBQWM7UUFDZC
-xlQUFlO1FBQ2YsZ0JBQWdCO1FBQ2hCLGlCQUFpQjtNQUNuQjs7QUFFQTtRQUNFLGN
-BQWM7UUFDZCxlQUFlO1FBQ2YsaUJBQWlCO01BQ25COztBQUlKO0lBQ0UsU0FBUztJ
-QUNULGNBQWM7RUFLaEI7O0FBSEU7TUFDRSxjQUFjO0lBQ2hCOztBQUdGO0lBQ0Us
-V0FBVztFQUNiOztBQUVBO0lBQ0UsbUJBQW1CO0lBQ25CLDhCQUE4QjtJQUM5QixtQkF
-BbUI7SUFDbkIsZ0NBQWdDO0lBQ2hDLGdDQUFnQztJQUNoQyxlQUFlO0lBQ2Ysa0JBQW
-tCO0lBQ2xCLFlBQVk7RUFRZDs7QUFORTtNQUNFLFdBQVc7TUFDWCxlQUFlO01BQ2Ys
-Z0JBQWdCO01BQ2hCLGlCQUFpQjtJQUNuQjs7QUFHRjtJQUNFLGlCQUFpQjtFQUNuQjs
-7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFHRjtFQUNFLHNCQUFzQjtFQUN0QiwrREFBM
-EU7RUFDMUUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNC
-
-QUFzQjtFQUN0QiwrREFBeUU7RUFDekUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQj
-s7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMkU7RUFDM0UsZ0JBQWdCO0VBQ2
-hCLGtCQUFrQjtBQUNwQiIsInNvdXJjZXNDb250ZW50IjpbIkBrZXlmcmFtZXMgc2xpZGUtaW
-4tb25lLXRhcCB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSg4MHB4
-KTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDBweCk7XG4gIH1
-cbn1cblxuLnRydXN0LWhpZGUtZ3JhY2VmdWxseSB7XG4gIG9wYWNpdHk6IDA7XG59XG5
-cbi50cnVzdC13YWxsZXQtb25lLXRhcCB7XG4gIC5oaWRkZW4ge1xuICAgIGRpc3BsYXk6I
-G5vbmU7XG4gIH1cblxuICAuc2VtaWJvbGQge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4
-gIH1cblxuICAuYmluYW5jZS1wbGV4IHtcbiAgICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1x
-uICB9XG5cbiAgLnJvdW5kZWQtZnVsbCB7XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuI
-CB9XG5cbiAgLmZsZXgge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gIH1cblxuICAuZmxleC1jb
-2wge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cblxuICAuaXRlbXMtY2Vud
-GVyIHtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB9XG5cbiAgLnNwYWNlLWJldHdlZ
-W4ge1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgfVxuXG4gIC5qdX
-N0aWZ5LWNlbnRlciB7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cblxuIC
-Audy1mdWxsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuXG4gIC5ib3gge1xuICAgIHRyYW
-5zaXRpb246IGFsbCAwLjVzIGN1YmljLWJlemllcigwLCAwLCAwLCAxLjQzKTtcbiAgICBhbmlt
-YXRpb246IHNsaWRlLWluLW9uZS10YXAgMC41cyBjdWJpYy1iZXppZXIoMCwgMCwgMCw
-gMS40Myk7XG4gICAgd2lkdGg6IDM4NHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7
-XG4gICAgYmFja2dyb3VuZDogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwcHggMnB4IDRweCAw
-cHggcmdiYSgwLCAwLCAwLCAwLjI1KTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgcml
-naHQ6IDMwcHg7XG4gICAgYm90dG9tOiAzMHB4O1xuICAgIHotaW5kZXg6IDEwMjA7XG4
-gIH1cblxuICAuaGVhZGVyIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgYm9yZGVyLWJvdHRvbT
-ogMXB4IHNvbGlkICNlNmU2ZTY7XG4gICAgcGFkZGluZzogMTBweCAxOHB4O1xuXG4gIC
-AgLmxlZnQtaXRlbXMge1xuICAgICAgZ2FwOiAxNXB4O1xuICAgIH1cblxuICAgIC50aXRsZS
-B7XG4gICAgICBjb2xvcjogIzFlMjMyOTtcbiAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgIG
-ZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICBsaW5lLWhlaWdodDogMjhweDtcbiAgICB9XG5cb
-iAgICAuc3VidGl0bGUge1xuICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICBmb250LXNpe
-mU6IDE0cHg7XG4gICAgICBsaW5lLWhlaWdodDogMjBweDtcbiAgICB9XG5cbiAgICAuY2xv
-c2Uge1xuICAgICAgY29sb3I6ICMxZTIzMjk7XG4gICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gIC
-AgfVxuICB9XG5cbiAgLmJvZHkge1xuICAgIHBhZGRpbmc6IDlweCAxOHB4O1xuICAgIGdhc
-DogMTBweDtcblxuICAgIC5yaWdodC1pdGVtcyB7XG4gICAgICBnYXA6IDEwcHg7XG4gICA
-gICB3aWR0aDogMTAwJTtcblxuICAgICAgLndhbGxldC10aXRsZSB7XG4gICAgICAgIGNvb
-G9yOiAjMWUyMzI5O1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbn
-Qtd2VpZ2h0OiA2MDA7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiAyMHB4O1xuICAgICAgfVxu
-XG4gICAgICAud2FsbGV0LXN1YnRpdGxlIHtcbiAgICAgICAgY29sb3I6ICM0NzRkNTc7XG4g
-ICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gI
-CAgICB9XG4gICAgfVxuICB9XG5cbiAgLmNvbm5lY3QtaW5kaWNhdG9yIHtcbiAgICBnYXA6
-IDE1cHg7XG4gICAgcGFkZGluZzogOHB4IDA7XG5cbiAgICAuZmxvdy1pY29uIHtcbiAgICAgI
-GNvbG9yOiAjNDc0ZDU3O1xuICAgIH1cbiAgfVxuXG4gIC5sb2FkaW5nLWNvbG9yIHtcbiAgI
-CBjb2xvcjogI2ZmZjtcbiAgfVxuXG4gIC5idXR0b24ge1xuICAgIGJvcmRlci1yYWRpdXM6IDUw
-cHg7XG4gICAgb3V0bGluZTogMnB4IHNvbGlkIHRyYW5zcGFyZW50O1xuICAgIG91dGxpb
-mUtb2Zmc2V0OiAycHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDUsIDAsIDI1NSk7X
-G4gICAgYm9yZGVyLWNvbG9yOiByZ2IoMjI5LCAyMzEsIDIzNSk7XG4gICAgY3Vyc29yOiB
-wb2ludGVyO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDQ1cHg7XG5c
-biAgICAuYnV0dG9uLXRleHQge1xuICAgICAgY29sb3I6ICNmZmY7XG4gICAgICBmb250LX
-NpemU6IDE2cHg7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgbGluZS1oZWln
-aHQ6IDIwcHg7XG4gICAgfVxuICB9XG5cbiAgLmZvb3RlciB7XG4gICAgbWFyZ2luOiAyMHB
-
-4IDMwcHg7XG4gIH1cblxuICAuY2hlY2staWNvbiB7XG4gICAgY29sb3I6ICNmZmY7XG4gIH
-1cbn1cblxuQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnQmluYW5jZSc7XG4gIHNy
-YzogdXJsKCcuL2ZvbnRzL2JpbmFuY2VQbGV4L0JpbmFuY2VQbGV4LVJlZ3VsYXIub3RmJ
-ykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNDAwO1xuICBmb250L
-XN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0
-JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxl
-eC1NZWRpdW0ub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDo
-gNTAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICB
-mb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlU
-GxleC9CaW5hbmNlUGxleC1TZW1pQm9sZC5vdGYnKSBmb3JtYXQoJ29wZW50eXBlJyk7
-XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cbiJdLCJ
-zb3VyY2VSb290IjoiIn0= */
-  </style>
-  <style>
-    @keyframes badge-spin {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .badge-spinner {
-      animation: badge-spin 1s linear infinite;
-    }
-
-    @keyframes base44-fade-in {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes base44-scale-in {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-  </style>
-  <style>
-    .imageye-selected {
-      outline: 2px solid black !important;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
-    }
-  </style>
-  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck=""
-    data-utmify-prevent-subids="" async="" defer=""></script>
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div id="root">
-    <main class="min-h-screen">
-      <div class="fixed left-0 z-[60] pointer-events-none" style="
-            top: 40px;
-            width: 100%;
-            height: 5px;
-            background-color: transparent;
-          ">
-        <div style="
-              height: 100%;
-              width: 0%;
-              background: rgb(255, 255, 255);
-              box-shadow: rgba(255, 255, 255, 0.6) 0px 0px 8px;
-              transition: width 0.15s ease-out;
-              border-radius: 0px 3px 3px 0px;
-            "></div>
-      </div>
-      <div class="fixed bottom-24 left-4 z-[70] flex flex-col gap-3 pointer-events-none"></div>
-      <div
-        class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-primary via-primary to-accent text-primary-foreground py-2 px-4 shadow-lg">
-        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 animate-pulse" fill="none" viewBox="0 0 
-24 24" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg><span class="text-sm font-medium">Oferta expira em:</span>
-            <div class="flex items-center gap-1 font-bold">
-              <span class="bg-primary-foreground/20 px-1.5 py-0.5 rounded text-sm">02</span><span>:</span><span
-                class="bg-primary-foreground/20 px-1.5 py-0.5 rounded text-sm">41</span><span>:</span><span
-                class="bg-primary-foreground/20 px-1.5 py-0.5 rounded text-sm">16</span>
-            </div>
-          </div>
-          <div class="hidden sm:block w-px h-4 bg-primary-foreground/30"></div>
-          <div class="flex items-center gap-2">
-            <span class="relative flex h-2 w-2"><span
-                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-foreground opacity-75"></span><span
-                class="relative inline-flex rounded-full h-2 w-2 bg-primary-foreground"></span></span><svg
-              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-users w-4 h-4">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 
-4 0 0 1 0 7.75"></path>
-            </svg><span class="text-sm font-medium">Apenas <strong>13 vagas</strong> restantes</span>
-          </div>
-        </div>
-      </div>
-      <section class="relative min-h-screen overflow-hidden pt-10">
-        <div class="absolute inset-0">
-          <img src="https://i.imgur.com/PSjAgFU.png" alt="Arcanjo Miguel - Limpeza Espiritual"
-            class="w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/85"></div>
-        </div>
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-          <div class="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-          <div class="absolute bottom-20 right-10 w-80 h-80 bg-sage/30 rounded-full blur-3xl animate-float delay-300">
-          </div>
-        </div>
+
+    <div class="container">
+        <header style="display: none;">
+            <!-- Hidden header in main body as requested by modern layouts often, but keeping structure if needed. Or we can just style it inside container -->
+        </header>
+        <!-- Actually, original design had header inside container? Let's keep it but enhance -->
         <div
-          class="container relative z-10 flex flex-col items-center justify-center min-h-screen py-20 px-4 text-center">
-          <div
-            class="opacity-0 animate-fade-up inline-flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full border border-primary/20 shadow-soft mb-8">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-sparkles w-4 h-4 text-primary">
-              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 
-0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 
-15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 
-6.135a.5.5 0 0 1-.963 0z"></path>
-              <path d="M20 3v4"></path>
-              <path d="M22 
-5h-4"></path>
-              <path d="M4 17v2"></path>
-              <path d="M5 18H3"></path>
-            </svg><span class="text-sm font-medium text-foreground">Jornada Espiritual de 21 Dias</span>
-          </div>
-          <h1
-            class="opacity-0 animate-fade-up delay-100 text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-semibold text-foreground leading-tight max-w-4xl mb-6">
-            21 Dias de Limpeza Espiritual do
-            <span class="text-gradient-gold">Arcanjo Miguel</span>
-          </h1>
-          <p
-            class="opacity-0 animate-fade-up delay-200 text-lg md:text-xl lg:text-2xl font-heading italic text-foreground/80 max-w-3xl mb-10 leading-relaxed">
-            Uma jornada diária de oração, reflexão e transformação espiritual
-            para quem sente que precisa recomeçar com Deus — mesmo em
-            silêncio.
-          </p>
-          <div class="opacity-0 animate-fade-up delay-300 flex flex-wrap justify-center gap-3 mb-10">
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 bg-card/60 backdrop-blur-sm rounded-full border border-border">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-book-open w-4 h-4 text-primary">
-                <path d="M12 7v14"></path>
-                <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 
-1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
-              </svg><span class="text-sm text-foreground">Orações guiadas</span>
-            </div>
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 bg-card/60 backdrop-blur-sm rounded-full border border-border">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-book-open w-4 h-4 text-primary">
-                <path d="M12 7v14"></path>
-                <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 
-1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
-              </svg><span class="text-sm text-foreground">Reflexões diárias</span>
-            </div>
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 bg-card/60 backdrop-blur-sm rounded-full border border-border">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-headphones w-4 h-4 text-primary">
-                <path d="M3 14h3a2 2 0 0 1 2 
-2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 
-2 0 0 1 2-2h3"></path>
-              </svg><span class="text-sm text-foreground">Leitura bíblica</span>
-            </div>
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 bg-card/60 backdrop-blur-sm rounded-full border border-border">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-smartphone w-4 h-4 text-primary">
-                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
-                <path d="M12 18h.01"></path>
-              </svg><span class="text-sm text-foreground">Acesso via App</span>
-            </div>
-          </div>
-          <div class="opacity-0 animate-fade-up delay-400 w-full px-4 sm:w-auto sm:px-0">
-            <a href="https://pay.lojou.app/p/rbKkN?utm_source=organic&amp;utm_campaign=&amp;utm_m
-edium=&amp;utm_content=&amp;utm_term="
-              class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-semibold sm:py-6 rounded-full shadow-[0_0_20px_hsl(38_90%_65%/0.3)] hover:shadow-[0_0_40px_hsl(38_90%_65%/0.5)] hover:scale-105 transition-all duration-300 animate-pulse-glow text-center min-h-14 px-6 sm:px-10 py-4 text-base sm:text-lg group w-full sm:w-auto flex items-center justify-center"><span>
-                Começar Limpeza Profunda Agora</span><svg
-                class="w-5 h-5 transition-transform group-hover:translate-x-1 shrink-0" fill="none"
-                stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 
-4m4-4H3"></path>
-              </svg></a>
-          </div>
-          <div class="opacity-0 animate-fade-up delay-500 mt-6 flex flex-col sm:flex-row items-center gap-3">
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full border border-primary/20 shadow-soft">
-              <div class="flex -space-x-2">
-                <div
-                  class="w-6 h-6 rounded-full bg-gradient-gold border-2 border-card flex items-center justify-center">
-                  <span class="text-[8px] text-primary-foreground font-bold">A</span>
-                </div>
-                <div
-                  class="w-6 h-6 rounded-full bg-gradient-gold border-2 border-card flex items-center justify-center">
-                  <span class="text-[8px] text-primary-foreground font-bold">B</span>
-                </div>
-                <div
-                  class="w-6 h-6 rounded-full bg-gradient-gold border-2 border-card flex items-center justify-center">
-                  <span class="text-[8px] text-primary-foreground font-bold">C</span>
-                </div>
-                <div
-                  class="w-6 h-6 rounded-full bg-gradient-gold border-2 border-card flex items-center justify-center">
-                  <span class="text-[8px] text-primary-foreground font-bold">D</span>
-                </div>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-users w-4 h-4 text-primary">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 
-4 0 0 1 0 7.75"></path>
-              </svg><span class="text-sm font-medium text-foreground"><span class="font-bold">+2,547</span> já
-                transformaram a sua
-                fé</span>
-            </div>
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full border border-primary/20">
-              <div class="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-eye w-4 h-4 text-primary">
-                  <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 
-0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg><span
-                  class="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-500 rounded-full animate-pulse-dot"></span>
-              </div>
-              <span class="text-sm text-foreground"><span class="font-semibold text-primary">168</span> pessoas a
-                ver agora</span>
-            </div>
-          </div>
-          <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <div class="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
-              <div class="w-1.5 h-2.5 bg-primary rounded-full"></div>
-            </div>
-          </div>
+            style="background-color: var(--primary-color); border-radius: var(--radius-lg); padding: 20px; color: white; text-align: center; margin-bottom: 24px; box-shadow: var(--shadow-md);">
+            <h1>BEM-VINDO</h1>
+            <h2 style="font-size: 14px; opacity: 0.9;">Ao Detective Pro</h2>
         </div>
-      </section>
-      <section class="py-24 bg-card relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-40 h-40 opacity-10">
-          <svg viewBox="0 
-0 100 100" class="w-full h-full text-accent">
-            <path fill="currentColor" d="M50 0C50 0 60 30 
-90 50C60 70 50 100 50 100C50 100 40 70 10 50C40 30 50 0 50 
-0Z"></path>
-          </svg>
-        </div>
-        <div class="container px-4">
-          <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-foreground mb-4">
-              Esta jornada é para ti se...
-            </h2>
-            <div class="w-16 h-1 bg-gradient-gold mx-auto rounded-full mb-12"></div>
-            <div class="grid gap-6 mb-12">
-              <div
-                class="flex items-center gap-4 p-5 bg-background rounded-2xl shadow-card border border-border/50 transition-all duration-300 hover:shadow-soft hover:-translate-y-1">
-                <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-heart w-5 h-5 text-accent">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 
-2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                  </svg>
-                </div>
-                <p class="text-lg text-foreground text-left">
-                  Sentes que a tua fé esfriou
-                </p>
-              </div>
-              <div
-                class="flex items-center gap-4 p-5 bg-background rounded-2xl shadow-card border border-border/50 transition-all duration-300 hover:shadow-soft hover:-translate-y-1">
-                <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-cloud-rain w-5 h-5 text-accent">
-                    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 
-8.242"></path>
-                    <path d="M16 14v6"></path>
-                    <path d="M8 14v6"></path>
-                    <path d="M12 
-16v6"></path>
-                  </svg>
-                </div>
-                <p class="text-lg text-foreground text-left">
-                  Oras, mas parece que Deus está distante
-                </p>
-              </div>
-              <div
-                class="flex items-center gap-4 p-5 bg-background rounded-2xl shadow-card border border-border/50 transition-all duration-300 hover:shadow-soft hover:-translate-y-1">
-                <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-compass w-5 h-5 text-accent">
-                    <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 
-1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path>
-                    <circle cx="12" cy="12" r="10"></circle>
-                  </svg>
-                </div>
-                <p class="text-lg text-foreground text-left">
-                  Andas cansado(a), ansioso(a) ou sem direcção espiritual
-                </p>
-              </div>
-              <div
-                class="flex items-center gap-4 p-5 bg-background rounded-2xl shadow-card border border-border/50 transition-all duration-300 hover:shadow-soft hover:-translate-y-1">
-                <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-refresh-cw w-5 h-5 text-accent">
-                    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 
-2.74L21 8"></path>
-                    <path d="M21 3v5h-5"></path>
-                    <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 
-0 0 1-6.74-2.74L3 16"></path>
-                    <path d="M8 16H3v5"></path>
-                  </svg>
-                </div>
-                <p class="text-lg text-foreground text-left">
-                  Queres recomeçar, mas não sabes por onde começar
-                </p>
-              </div>
-            </div>
-            <div class="bg-gradient-hero p-8 rounded-3xl border border-primary/10">
-              <p class="text-xl md:text-2xl font-heading text-foreground italic">
-                "Não é falta de fé. Às vezes é só
-                <span class="font-semibold text-gradient-gold">cansaço da alma</span>."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div style="
-            position: fixed;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
-            z-index: 75;
-            transform: translateY(110%);
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            background-color: rgb(255, 255, 255);
-            border-top: 1px solid rgb(229, 231, 235);
-            box-shadow: rgba(0, 0, 0, 0.12) 0px -4px 24px;
-            padding: 12px 16px;
-          ">
-        <div style="
-              max-width: 500px;
-              margin: 0px auto;
-              display: flex;
-              align-items: center;
-              gap: 16px;
-            ">
-          <div style="flex-shrink: 0">
-            <div style="
-                  font-size: 11px;
-                  color: rgb(156, 163, 175);
-                  text-decoration: line-through;
-                ">
-              1000 MT
-            </div>
-            <div style="
-                  font-size: 20px;
-                  font-weight: 700;
-                  color: rgb(249, 115, 22);
-                ">
-              297 MZN
-            </div>
-          </div>
-          <a href="https://pay.lojou.app/p/rbKkN?utm_source=organic&amp;utm_campaign=&amp;utm_m
-edium=&amp;utm_content=&amp;utm_term=" style="
-                flex: 1 1 0%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 8px;
-                border-radius: 9999px;
-                font-weight: 600;
-                color: rgb(255, 255, 255);
-                font-size: 15px;
-                padding: 12px 20px;
-                background: linear-gradient(
-                  135deg,
-                  rgb(249, 115, 22),
-                  rgb(250, 204, 21)
-                );
-                box-shadow: rgba(249, 115, 22, 0.4) 0px 4px 16px;
-                text-decoration: none;
-                transition: transform 0.2s;
-              "><span></span><span>Começar agora</span><svg width="16" height="16" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 
-4m4-4H3"></path>
-            </svg></a>
-        </div>
-        <div style="
-              text-align: center;
-              margin-top: 4px;
-              font-size: 10px;
-              color: rgb(156, 163, 175);
-            ">
-           M-Pesa • e-Mola • Visa • Mastercard
-        </div>
-      </div>
-      <section class="py-24 bg-background relative overflow-hidden">
-        <div class="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&amp;q=4
-0" alt="" class="w-full h-full object-cover opacity-15" />
-        </div>
-        <div class="absolute inset-0 opacity-30">
-          <div class="absolute top-1/4 left-0 w-72 h-72 bg-secondary rounded-full blur-3xl"></div>
-          <div class="absolute bottom-1/4 right-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-        </div>
-        <div class="container px-4 relative z-10">
-          <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-8">
-              <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-foreground mb-4">
-                O que pode mudar em 21 dias?
-              </h2>
-              <div class="w-16 h-1 bg-gradient-sage mx-auto rounded-full mb-8"></div>
-              <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                Durante 21 dias consecutivos, vais seguir um caminho simples e
-                profundo que pode ajudar-te a:
-              </p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-6 mb-12">
-              <div
-                class="group p-6 bg-card rounded-2xl border border-border shadow-card transition-all duration-300 hover:shadow-soft hover:-translate-y-1 hover:border-primary/30">
-                <div class="flex items-start gap-4">
-                  <div
-                    class="flex-shrink-0 w-14 h-14 bg-gradient-sage rounded-2xl flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-calendar-days w-6 h-6 text-accent-foreground">
-                      <path d="M8 
-2v4"></path>
-                      <path d="M16 2v4"></path>
-                      <rect width="18" height="18" x="3" y="4" rx="2"></rect>
-                      <path d="M3 10h18"></path>
-                      <path d="M8 14h.01"></path>
-                      <path d="M12 
-14h.01"></path>
-                      <path d="M16 14h.01"></path>
-                      <path d="M8 18h.01"></path>
-                      <path d="M12 
-18h.01"></path>
-                      <path d="M16 18h.01"></path>
-                    </svg>
-                  </div>
-                  <p class="text-lg text-foreground leading-relaxed pt-2">
-                    Recuperar o hábito da oração diária
-                  </p>
-                </div>
-              </div>
-              <div
-                class="group p-6 bg-card rounded-2xl border border-border shadow-card transition-all duration-300 hover:shadow-soft hover:-translate-y-1 hover:border-primary/30">
-                <div class="flex items-start gap-4">
-                  <div
-                    class="flex-shrink-0 w-14 h-14 bg-gradient-sage rounded-2xl flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-heart w-6 h-6 text-accent-foreground">
-                      <path d="M19 14c1.49-1.46 
-3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 
-8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                    </svg>
-                  </div>
-                  <p class="text-lg text-foreground leading-relaxed pt-2">
-                    Fortalecer a tua relação com Deus
-                  </p>
-                </div>
-              </div>
-              <div
-                class="group p-6 bg-card rounded-2xl border border-border shadow-card transition-all duration-300 hover:shadow-soft hover:-translate-y-1 hover:border-primary/30">
-                <div class="flex items-start gap-4">
-                  <div
-                    class="flex-shrink-0 w-14 h-14 bg-gradient-sage rounded-2xl flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-sparkles w-6 h-6 text-accent-foreground">
-                      <path d="M9.937 15.5A2 2 0 
-0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 
-8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 
-.964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
-                      <path d="M20 3v4"></path>
-                      <path d="M22 5h-4"></path>
-                      <path d="M4 17v2"></path>
-                      <path d="M5 
-18H3"></path>
-                    </svg>
-                  </div>
-                  <p class="text-lg text-foreground leading-relaxed pt-2">
-                    Encontrar paz interior mesmo em meio às dificuldades
-                  </p>
-                </div>
-              </div>
-              <div
-                class="group p-6 bg-card rounded-2xl border border-border shadow-card transition-all duration-300 hover:shadow-soft hover:-translate-y-1 hover:border-primary/30">
-                <div class="flex items-start gap-4">
-                  <div
-                    class="flex-shrink-0 w-14 h-14 bg-gradient-sage rounded-2xl flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-scale w-6 h-6 text-accent-foreground">
-                      <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 
 
-1s-2.13-.35-3-1Z"></path>
-                      <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 
-1s-2.13-.35-3-1Z"></path>
-                      <path d="M7 21h10"></path>
-                      <path d="M12 3v18"></path>
-                      <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path>
-                    </svg>
-                  </div>
-                  <p class="text-lg text-foreground leading-relaxed pt-2">
-                    Criar disciplina espiritual sem pressão ou culpa
-                  </p>
-                </div>
-              </div>
+        <div class="card">
+            <div class="card-title">
+                🕵 Você acabou de ganhar uma
+                <span class="highlight-text">INVESTIGAÇÃO GRATUITA</span>
             </div>
-            <div class="text-center">
-              <div class="inline-block p-8 bg-card rounded-3xl border border-primary/20 shadow-glow">
-                <p class="text-xl md:text-2xl font-heading text-foreground">
-                  <span class="font-medium">Não é religião forçada.</span><br /><span
-                    class="text-gradient-gold font-semibold">É uma caminhada diária com propósito.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-24 bg-card relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5">
-          <div class="absolute inset-0" style="
-                background-image: radial-gradient(
-                  circle at 2px 2px,
-                  currentcolor 1px,
-                  transparent 0px
-                );
-                background-size: 40px 40px;
-              "></div>
-        </div>
-        <div class="container px-4 relative z-10">
-          <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-12">
-              <div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 
-24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-smartphone w-4 h-4 text-accent">
-                  <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
-                  <path d="M12 
-18h.01"></path>
-                </svg><span class="text-sm font-medium text-secondary-foreground">Conteúdo do App</span>
-              </div>
-              <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-foreground mb-4">
-                O que vais encontrar no app
-              </h2>
-              <div class="w-16 h-1 bg-gradient-gold mx-auto rounded-full"></div>
-            </div>
-            <div class="bg-background rounded-3xl p-8 md:p-10 border border-border shadow-card mb-10">
-              <ul class="space-y-5">
-                <li class="flex items-center gap-4">
-                  <div class="flex-shrink-0 w-8 h-8 bg-gradient-gold rounded-lg flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-circle-check w-5 h-5 text-primary-foreground">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <path d="m9 12 2 2 4-4"></path>
-                    </svg>
-                  </div>
-                  <span class="text-lg text-foreground">Orações guiadas diárias</span>
-                </li>
-                <li class="flex items-center gap-4">
-                  <div class="flex-shrink-0 w-8 h-8 bg-gradient-gold rounded-lg flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-circle-check w-5 h-5 text-primary-foreground">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <path d="m9 12 2 2 
-4-4"></path>
-                    </svg>
-                  </div>
-                  <span class="text-lg text-foreground">Reflexões espirituais profundas</span>
-                </li>
-                <li class="flex items-center gap-4">
-                  <div class="flex-shrink-0 w-8 h-8 bg-gradient-gold rounded-lg flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-circle-check w-5 h-5 text-primary-foreground">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <path d="m9 12 2 2 4-4"></path>
-                    </svg>
-                  </div>
-                  <span class="text-lg text-foreground">Leitura bíblica com aplicação prática</span>
-                </li>
-                <li class="flex items-center gap-4">
-                  <div class="flex-shrink-0 w-8 h-8 bg-gradient-gold rounded-lg flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-circle-check w-5 h-5 text-primary-foreground">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <path d="m9 12 2 2 
 
-4-4"></path>
-                    </svg>
-                  </div>
-                  <span class="text-lg text-foreground">Estrutura simples, acessível e diária</span>
-                </li>
-                <li class="flex items-center gap-4">
-                  <div class="flex-shrink-0 w-8 h-8 bg-gradient-gold rounded-lg flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-circle-check w-5 h-5 text-primary-foreground">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <path d="m9 12 2 2 4-4"></path>
-                    </svg>
-                  </div>
-                  <span class="text-lg text-foreground">Acesso pelo telemóvel, a qualquer hora</span>
-                </li>
-              </ul>
-            </div>
-            <div class="text-center">
-              <div
-                class="inline-flex items-center gap-3 px-6 py-4 bg-secondary/50 rounded-full border border-accent/20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-clock w-5 h-5 text-accent">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 
-14"></polyline>
-                </svg>
-                <p class="text-foreground font-medium">
-                  Tudo organizado para 5–10 minutos por dia.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-24 bg-background relative overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-          <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-64 h-64 bg-sage/20 rounded-full blur-3xl"></div>
-          <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-        </div>
-        <div class="container px-4 relative z-10">
-          <div class="max-w-2xl mx-auto text-center">
-            <div
-              class="inline-flex items-center justify-center w-16 h-16 bg-gradient-sage rounded-2xl shadow-soft mb-8">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-refresh-cw w-8 h-8 text-accent-foreground">
-                <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 
-8"></path>
-                <path d="M21 3v5h-5"></path>
-                <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 
-1-6.74-2.74L3 16"></path>
-                <path d="M8 16H3v5"></path>
-              </svg>
-            </div>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-foreground mb-8">
-              E se eu falhar um dia?
-            </h2>
-            <div class="bg-card p-8 md:p-10 rounded-3xl border border-border shadow-card mb-8">
-              <p class="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-                Não há punições, julgamentos ou regras rígidas.<br /><span class="text-foreground font-medium">Podes
-                  recomeçar sempre que precisares.</span>
-              </p>
-              <div class="w-16 h-0.5 bg-gradient-gold mx-auto rounded-full mb-6"></div>
-              <div class="flex items-center justify-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-heart w-5 h-5 text-accent">
-                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 
-2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                </svg>
-                <p class="text-xl md:text-2xl font-heading text-foreground italic">
-                  "Deus não exige perfeição.<br class="hidden sm:block" /><span
-                    class="text-gradient-gold font-semibold">Ele honra a intenção do coração.</span>"
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-24 bg-background relative overflow-hidden">
-        <div class="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1475483768296-6163e08872a1?w=1200&amp;q=3
-0" alt="" class="w-full h-full object-cover opacity-10" />
-        </div>
-        <div class="container px-4 relative z-10">
-          <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-              <div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-quote w-4 h-4 text-accent">
-                  <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 
-2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 
-0-2-2z"></path>
-                  <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 
-1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
-                </svg><span class="text-sm font-medium text-secondary-foreground">Testemunhos</span>
-              </div>
-              <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-foreground mb-4">
-                Vidas Transformadas pela Fé
-              </h2>
-              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Veja o que dizem as pessoas que completaram a jornada de 21
-                dias
-              </p>
-              <div class="w-16 h-1 bg-gradient-gold mx-auto rounded-full mt-6"></div>
-            </div>
-            <div class="grid grid-cols-3 gap-4 md:gap-8 mb-16 max-w-3xl mx-auto">
-              <div class="text-center p-4 md:p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-                <div class="w-12 h-12 mx-auto mb-3 bg-gradient-gold rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-users w-6 h-6 text-primary-foreground">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 
-4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M22 21v-2a4 4 0 0 
-0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <p class="text-2xl md:text-4xl font-heading font-bold text-gradient-gold">
-                  2547+
-                </p>
-                <p class="text-xs md:text-sm text-muted-foreground mt-1">
-                  Vidas Transformadas
-                </p>
-              </div>
-              <div class="text-center p-4 md:p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-                <div class="w-12 h-12 mx-auto mb-3 bg-gradient-gold rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-heart w-6 h-6 text-primary-foreground">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 
-3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 
-7Z"></path>
-                  </svg>
-                </div>
-                <p class="text-2xl md:text-4xl font-heading font-bold text-gradient-gold">
-                  98%
-                </p>
-                <p class="text-xs md:text-sm text-muted-foreground mt-1">
-                  Taxa de Satisfação
-                </p>
-              </div>
-              <div class="text-center p-4 md:p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-                <div class="w-12 h-12 mx-auto mb-3 bg-gradient-gold rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-book-open w-6 h-6 text-primary-foreground">
-                    <path d="M12 7v14"></path>
-                    <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 
-1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
-                  </svg>
-                </div>
-                <p class="text-2xl md:text-4xl font-heading font-bold text-gradient-gold">
-                  21
-                </p>
-                <p class="text-xs md:text-sm text-muted-foreground mt-1">
-                  Dias de Jornada
-                </p>
-              </div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-              <div
-                class="group relative p-8 bg-card rounded-3xl border border-border shadow-card transition-all duration-500 hover:shadow-glow hover:-translate-y-2 hover:border-primary/30">
-                <div
-                  class="absolute -top-4 -right-4 w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center shadow-soft">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-quote w-5 h-5 text-primary-foreground">
-                    <path d="M16 3a2 2 0 0 0-2 
-2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 
-6-6V5a2 2 0 0 0-2-2z"></path>
-                    <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 
-
-1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 
-0-2-2z"></path>
-                  </svg>
-                </div>
-                <div class="flex gap-1 mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 
-0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 
-3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 
-2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 
-0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 
-1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 
-1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 
-5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 
-1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 
-.294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 
-0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 
-3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 
-2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 
-0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 
-1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 
-1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 
-5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 
-1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 
-.294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 
-0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 
-3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 
-2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 
-0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 
-1.597-1.16z"></path>
-                  </svg>
-                </div>
-                <blockquote class="text-foreground leading-relaxed mb-8 italic">
-                  "Como professora, preciso de paciência todos os dias. As
-                  orações da manhã me dão força. Meus alunos até notaram que
-                  estou mais calma e amorosa."
-                </blockquote>
-                <div class="flex items-center gap-4">
-                  <div class="w-14 h-14 rounded-full border-2 border-primary/30 overflow-hidden flex-shrink-0">
-                    <img src="https://i.imgur.com/gSZINXv.png" alt="Joana Tembe" class="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <p class="font-heading font-semibold text-foreground">
-                      Joana Tembe
-                    </p>
-                    <p class="text-sm text-muted-foreground">
-                      Xai-Xai, Moçambique
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="group relative p-8 bg-card rounded-3xl border border-border shadow-card transition-all duration-500 hover:shadow-glow hover:-translate-y-2 hover:border-primary/30">
-                <div
-                  class="absolute -top-4 -right-4 w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center shadow-soft">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-quote w-5 h-5 text-primary-foreground">
-                    <path d="M16 3a2 2 0 0 0-2 
-2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 
-6-6V5a2 2 0 0 0-2-2z"></path>
-                    <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 
-1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 
-0-2-2z"></path>
-                  </svg>
-                </div>
-                <div class="flex gap-1 mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 
-0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 
-3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 
-2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 
-0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 
-1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 
-1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 
-5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 
-1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 
-.294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 
-0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 
-3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 
-2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 
-0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 
-1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 
-1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 
-5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 
-1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 
-.294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 
-0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 
-3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 
-2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 
-0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 
-1.597-1.16z"></path>
-                  </svg>
-                </div>
-                <blockquote class="text-foreground leading-relaxed mb-8 italic">
-                  "Trabalho no hospital e vejo muito sofrimento. Este app se
-                  tornou meu refúgio espiritual. Cada devoção me renova para
-                  cuidar melhor dos pacientes."
-                </blockquote>
-                <div class="flex items-center gap-4">
-                  <div class="w-14 h-14 rounded-full border-2 border-primary/30 overflow-hidden flex-shrink-0">
-                    <img src="https://i.imgur.com/noc4zjr.jpeg" alt="Luísa Mabjaia"
-                      class="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <p class="font-heading font-semibold text-foreground">
-                      Luísa Mabjaia
-                    </p>
-                    <p class="text-sm text-muted-foreground">
-                      Quelimane, Moçambique
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="group relative p-8 bg-card rounded-3xl border border-border shadow-card transition-all duration-500 hover:shadow-glow hover:-translate-y-2 hover:border-primary/30">
-                <div
-                  class="absolute -top-4 -right-4 w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center shadow-soft">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-quote w-5 h-5 text-primary-foreground">
-                    <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 
-0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
-                    <path d="M5 
-3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 
-6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
-                  </svg>
-                </div>
-                <div class="flex gap-1 mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 
-0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 
-3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 
-2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 
-0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 
-1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 
-1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 
-5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 
-1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 
-.294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 
-0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 
-3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 
-2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 
-0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 
-1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 
-1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 
-5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 
-1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 
-.294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-star w-5 h-5 fill-primary text-primary">
-                    <path d="M11.525 2.295a.53.53 0 
-0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 
-3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 
-2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 
-0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 
-1.597-1.16z"></path>
-                  </svg>
-                </div>
-                <blockquote class="text-foreground leading-relaxed mb-8 italic">
-                  "Tenho uma pequena loja no mercado e as preocupações eram
-                  constantes. Desde que comecei a jornada, aprendi a confiar
-                  meus negócios a Deus. A paz chegou!"
-                </blockquote>
-                <div class="flex items-center gap-4">
-                  <div class="w-14 h-14 rounded-full border-2 border-primary/30 overflow-hidden flex-shrink-0">
-                    <img src="https://i.imgur.com/Mvw9vLN.png" alt="Helena Cumbe" class="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <p class="font-heading font-semibold text-foreground">
-                      Helena Cumbe
-                    </p>
-                    <p class="text-sm text-muted-foreground">
-                      Chimoio, Moçambique
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="text-center mt-12">
-              <div
-                class="inline-flex items-center gap-3 px-6 py-3 bg-card/50 backdrop-blur-sm rounded-full border border-border">
-                <div class="flex -space-x-2">
-                  <div
-                    class="w-8 h-8 rounded-full bg-gradient-gold border-2 border-background flex items-center justify-center">
-                    <span class="text-xs font-bold text-primary-foreground">J</span>
-                  </div>
-                  <div
-                    class="w-8 h-8 rounded-full bg-gradient-gold border-2 border-background flex items-center justify-center">
-                    <span class="text-xs font-bold text-primary-foreground">L</span>
-                  </div>
-                  <div
-                    class="w-8 h-8 rounded-full bg-gradient-gold border-2 border-background flex items-center justify-center">
-                    <span class="text-xs font-bold text-primary-foreground">H</span>
-                  </div>
-                </div>
-                <p class="text-muted-foreground">
-                  <span class="text-gradient-gold font-semibold">+2.500</span>
-                  pessoas já iniciaram sua jornada
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-20 bg-card relative overflow-hidden">
-        <div class="container px-4">
-          <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-              <h2 class="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
-                O que muda em <span class="text-gradient-gold">21 dias?</span>
-              </h2>
-              <p class="text-muted-foreground text-lg">
-                Veja a transformação que te espera
-              </p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
-              <div class="p-6 bg-destructive/5 rounded-2xl border border-destructive/20">
-                <div class="flex items-center gap-2 mb-6">
-                  <div class="w-10 h-10 bg-destructive/20 rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-x w-5 h-5 text-destructive">
-                      <path d="M18 6 6 18"></path>
-                      <path d="m6 6 12 
-12"></path>
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-heading font-semibold text-foreground">
-                    Antes
-                  </h3>
-                </div>
-                <ul class="space-y-4">
-                  <li class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 
-24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-x w-5 h-5 text-destructive flex-shrink-0 mt-0.5">
-                      <path d="M18 6 6 18"></path>
-                      <path d="m6 6 12 12"></path>
-                    </svg><span class="text-muted-foreground">Oração sem foco ou motivação</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-x w-5 h-5 text-destructive flex-shrink-0 mt-0.5">
-                      <path d="M18 6 6 18"></path>
-                      <path d="m6 6 12 
-
-12"></path>
-                    </svg><span class="text-muted-foreground">Ansiedade e preocupação constante</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-x w-5 h-5 text-destructive flex-shrink-0 mt-0.5">
-                      <path d="M18 6 6 
-18"></path>
-                      <path d="m6 6 12 12"></path>
-                    </svg><span class="text-muted-foreground">Distância de Deus no dia a dia</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-x w-5 h-5 text-destructive flex-shrink-0 mt-0.5">
-                      <path d="M18 6 6 18"></path>
-                      <path d="m6 6 12 
-12"></path>
-                    </svg><span class="text-muted-foreground">Falta de propósito e clareza</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-x w-5 h-5 text-destructive flex-shrink-0 mt-0.5">
-                      <path d="M18 6 6 
-18"></path>
-                      <path d="m6 6 12 12"></path>
-                    </svg><span class="text-muted-foreground">Culpa por não conseguir manter rotina espiritual</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="p-6 bg-accent/5 rounded-2xl border border-accent/30">
-                <div class="flex items-center gap-2 mb-6">
-                  <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-check w-5 h-5 text-accent">
-                      <path d="M20 6 9 
-17l-5-5"></path>
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-heading font-semibold text-foreground">
-                    Depois dos 21 Dias
-                  </h3>
-                </div>
-                <ul class="space-y-4">
-                  <li class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-check w-5 h-5 text-accent flex-shrink-0 mt-0.5">
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg><span class="text-foreground font-medium">Oração profunda e significativa</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-check w-5 h-5 text-accent flex-shrink-0 mt-0.5">
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg><span class="text-foreground font-medium">Paz interior e confiança em Deus</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-check w-5 h-5 text-accent flex-shrink-0 mt-0.5">
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg><span class="text-foreground font-medium">Conexão diária com o Divino</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-check w-5 h-5 text-accent flex-shrink-0 mt-0.5">
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg><span class="text-foreground font-medium">Clareza espiritual e propósito</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-check w-5 h-5 text-accent flex-shrink-0 mt-0.5">
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg><span class="text-foreground font-medium">Rotina espiritual natural e prazerosa</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="flex justify-center mt-6 md:hidden">
-              <div class="flex items-center gap-2 text-primary">
-                <span class="text-sm">De onde estás</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 
-0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-arrow-right w-5 h-5">
-                  <path d="M5 
-12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg><span class="text-sm font-semibold">Para onde queres ir</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-20 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-          <div class="absolute top-10 left-10 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
-          <div class="absolute bottom-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
-        </div>
-        <div class="container px-4 relative z-10">
-          <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-12">
-              <div
-                class="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-2xl shadow-glow mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-gift w-8 h-8 text-primary-foreground">
-                  <rect x="3" y="8" width="18" height="4" rx="1"></rect>
-                  <path d="M12 8v13"></path>
-                  <path d="M19 12v7a2 2 0 0 1-2 
-2H7a2 2 0 0 1-2-2v-7"></path>
-                  <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 
-1 4.5-5 2.5 2.5 0 0 1 0 5"></path>
-                </svg>
-              </div>
-              <h2 class="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
-                 Bónus Exclusivos
-                <span class="text-gradient-gold">Incluídos</span>
-              </h2>
-              <p class="text-muted-foreground text-lg">
-                Tudo isto está incluído no teu acesso completo
-              </p>
-            </div>
-            <div class="space-y-4 mb-8">
-              <div
-                class="flex items-center gap-4 p-4 bg-card rounded-2xl border border-border shadow-soft hover:border-primary/30 transition-colors">
-                <div class="flex-shrink-0 w-12 h-12 bg-gradient-gold rounded-xl flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-headphones w-6 h-6 text-primary-foreground">
-                    <path d="M3 14h3a2 2 0 
-0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 
-1-2-2v-3a2 2 0 0 1 2-2h3"></path>
-                  </svg>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big w-4 h-4 text-accent flex-shrink-0">
-                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                      <path d="m9 
-11 3 3L22 4"></path>
-                    </svg>
-                    <h3 class="font-semibold text-foreground truncate">
-                      21 Orações Guiadas em Áudio
-                    </h3>
-                  </div>
-                  <p class="text-sm text-muted-foreground">
-                    Para ouvires em qualquer momento do dia
-                  </p>
-                </div>
-                <div class="flex-shrink-0 text-right">
-                  <span class="text-sm text-muted-foreground line-through">200 MT</span><span
-                    class="block text-xs text-accent font-medium">GRÁTIS</span>
-                </div>
-              </div>
-              <div
-                class="flex items-center gap-4 p-4 bg-card rounded-2xl border border-border shadow-soft hover:border-primary/30 transition-colors">
-                <div class="flex-shrink-0 w-12 h-12 bg-gradient-gold rounded-xl flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-book-open w-6 h-6 text-primary-foreground">
-                    <path d="M12 7v14"></path>
-                    <path d="M3 18a1 1 0 0 1-1-1V4a1 1 
-0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 
-3 0 0 0-3-3z"></path>
-                  </svg>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 
-24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big w-4 h-4 text-accent flex-shrink-0">
-                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                      <path d="m9 11 3 3L22 
-4"></path>
-                    </svg>
-                    <h3 class="font-semibold text-foreground truncate">
-                      Diário de Reflexão Digital
-                    </h3>
-                  </div>
-                  <p class="text-sm text-muted-foreground">
-                    Para registares a tua jornada espiritual
-                  </p>
-                </div>
-                <div class="flex-shrink-0 text-right">
-                  <span class="text-sm text-muted-foreground line-through">150 MT</span><span
-                    class="block text-xs text-accent font-medium">GRÁTIS</span>
-                </div>
-              </div>
-              <div
-                class="flex items-center gap-4 p-4 bg-card rounded-2xl border border-border shadow-soft hover:border-primary/30 transition-colors">
-                <div class="flex-shrink-0 w-12 h-12 bg-gradient-gold rounded-xl flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-users w-6 h-6 text-primary-foreground">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 
-4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M22 21v-2a4 4 0 0 
-0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big w-4 h-4 text-accent flex-shrink-0">
-                      <path d="M21.801 
-10A10 10 0 1 1 17 3.335"></path>
-                      <path d="m9 11 3 3L22 4"></path>
-                    </svg>
-                    <h3 class="font-semibold text-foreground truncate">
-                      Acesso à Comunidade de Apoio
-                    </h3>
-                  </div>
-                  <p class="text-sm text-muted-foreground">
-                    Conecta-te com outros na mesma jornada
-                  </p>
-                </div>
-                <div class="flex-shrink-0 text-right">
-                  <span class="text-sm text-muted-foreground line-through">100 MT</span><span
-                    class="block text-xs text-accent font-medium">GRÁTIS</span>
-                </div>
-              </div>
-              <div
-                class="flex items-center gap-4 p-4 bg-card rounded-2xl border border-border shadow-soft hover:border-primary/30 transition-colors">
-                <div class="flex-shrink-0 w-12 h-12 bg-gradient-gold rounded-xl flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-file-text w-6 h-6 text-primary-foreground">
-                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 
-2-2V7Z"></path>
-                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                    <path d="M10 
-9H8"></path>
-                    <path d="M16 13H8"></path>
-                    <path d="M16 17H8"></path>
-                  </svg>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-circle-check-big w-4 h-4 text-accent flex-shrink-0">
-                      <path d="M21.801 
-10A10 10 0 1 1 17 3.335"></path>
-                      <path d="m9 11 3 3L22 4"></path>
-                    </svg>
-                    <h3 class="font-semibold text-foreground truncate">
-                      Guia Rápido de Começar
-                    </h3>
-                  </div>
-                  <p class="text-sm text-muted-foreground">
-                    Para iniciares a tua jornada de imediato
-                  </p>
-                </div>
-                <div class="flex-shrink-0 text-right">
-                  <span class="text-sm text-muted-foreground line-through">50 MT</span><span
-                    class="block text-xs text-accent font-medium">GRÁTIS</span>
-                </div>
-              </div>
-            </div>
-            <div class="text-center p-6 bg-gradient-gold rounded-2xl shadow-glow">
-              <p class="text-primary-foreground/80 mb-1">
-                Valor total dos bónus:
-              </p>
-              <p class="text-2xl font-heading font-bold text-primary-foreground line-through mb-1">
-                500 MT
-              </p>
-              <p class="text-lg font-semibold text-primary-foreground">
-                ✨ Tudo GRÁTIS quando te inscreveres hoje!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="oferta" class="py-24 bg-gradient-hero relative overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-          <div class="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-          <div class="absolute bottom-10 left-10 w-64 h-64 bg-sage/20 rounded-full blur-3xl animate-float delay-300">
-          </div>
-        </div>
-        <div class="container px-4 relative z-10">
-          <div class="max-w-2xl mx-auto">
-            <div class="text-center mb-12">
-              <span class="text-4xl mb-4 block"></span>
-              <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-foreground mb-4">
-                Oferta Especial
-              </h2>
-              <div class="w-16 h-1 bg-gradient-gold mx-auto rounded-full"></div>
-            </div>
-            <div class="bg-card rounded-3xl p-8 md:p-12 shadow-glow border border-primary/20 text-center">
-              <div
-                class="inline-flex items-center gap-2 px-4 py-2 bg-destructive/10 border border-destructive/30 rounded-full mb-4 animate-pulse">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-clock w-4 h-4 text-destructive">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 
-14"></polyline>
-                </svg><span class="text-sm font-medium text-destructive">Oferta expira em breve!</span>
-              </div>
-              <div
-                class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded-full mb-6 ml-2">
-                <span class="relative flex h-2 w-2"><span
-                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span><span
-                    class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span></span><span
-                  class="text-sm font-medium text-accent">Apenas 13 vagas restantes esta semana</span>
-              </div>
-              <div class="mb-8">
-                <div class="flex items-center justify-center gap-2 md:gap-4">
-                  <div class="flex flex-col items-center">
-                    <div class="relative">
-                      <div
-                        class="w-16 h-16 md:w-20 md:h-20 bg-gradient-gold rounded-xl flex items-center justify-center shadow-glow animate-pulse-glow">
-                        <span class="text-2xl md:text-3xl font-heading font-bold text-primary-foreground">02</span>
-                      </div>
-                      <span
-                        class="absolute -right-3 md:-right-4 top-1/2 -translate-y-1/2 text-2xl font-bold text-primary">:</span>
-                    </div>
-                    <span class="text-xs text-muted-foreground mt-2">Horas</span>
-                  </div>
-                  <div class="flex flex-col items-center">
-                    <div class="relative">
-                      <div
-                        class="w-16 h-16 md:w-20 md:h-20 bg-gradient-gold rounded-xl flex items-center justify-center shadow-glow animate-pulse-glow">
-                        <span class="text-2xl md:text-3xl font-heading font-bold text-primary-foreground">41</span>
-                      </div>
-                      <span
-                        class="absolute -right-3 md:-right-4 top-1/2 -translate-y-1/2 text-2xl font-bold text-primary">:</span>
-                    </div>
-                    <span class="text-xs text-muted-foreground mt-2">Minutos</span>
-                  </div>
-                  <div class="flex flex-col items-center">
-                    <div class="relative">
-                      <div
-                        class="w-16 h-16 md:w-20 md:h-20 bg-gradient-gold rounded-xl flex items-center justify-center shadow-glow animate-pulse-glow">
-                        <span class="text-2xl md:text-3xl font-heading font-bold text-primary-foreground">16</span>
-                      </div>
-                    </div>
-                    <span class="text-xs text-muted-foreground mt-2">Segundos</span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-2xl shadow-soft mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-gift w-8 h-8 text-primary-foreground">
-                  <rect x="3" y="8" width="18" height="4" rx="1"></rect>
-                  <path d="M12 8v13"></path>
-                  <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path>
-                  <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 
-5"></path>
-                </svg>
-              </div>
-              <h3 class="text-2xl md:text-3xl font-heading font-semibold text-foreground mb-3">
-                 Acesso Completo aos 21 Dias de Limpeza com Arcanjo Miguel
-              </h3>
-              <p class="text-muted-foreground mb-6">
-                Pagamento único • Acesso completo
-              </p>
-              <div class="mb-8 p-4 bg-secondary/30 rounded-2xl flex flex-col items-center gap-3">
-                <p class="text-sm text-muted-foreground line-through">
-                  De: 1000 MT
-                </p>
-                <div class="bg-gradient-gold rounded-xl px-8 py-4 shadow-glow flex flex-col items-center">
-                  <p class="text-sm font-semibold text-primary-foreground/80 uppercase tracking-widest">
-                    Agora
-                  </p>
-                  <p class="text-4xl font-heading font-bold text-primary-foreground">
-                    297 MZN
-                  </p>
-                </div>
-                <p class="text-sm text-accent font-medium">
-                  Economize 703 MZN hoje!
-                </p>
-              </div>
-              <a href="https://pay.lojou.app/p/rbKkN?utm_source=organic&amp;utm_campaign=&amp;utm_m
-edium=&amp;utm_content=&amp;utm_term="
-                class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-semibold rounded-full shadow-[0_4px_20px_-4px_hsl(38_80%_55%/0.15)] hover:shadow-[0_0_40px_hsl(38_90%_65%/0.25)] hover:scale-[1.02] text-center min-h-14 px-6 sm:px-10 py-4 text-base sm:text-lg w-full mb-8 group animate-pulse-glow flex items-center justify-center gap-2 flex-wrap transition-all duration-300"><span
-                  class="text-center">Começar AGORA</span><svg
-                  class="w-5 h-5 transition-transform group-hover:translate-x-1 shrink-0" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 
-24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 
-0l-4 4m4-4H3"></path>
-                </svg></a>
-              <div class="mb-6">
-                <div class="flex flex-wrap items-center justify-center gap-3">
-                  <span class="text-xs text-muted-foreground mr-1">Pagamento seguro via:</span>
-                  <div class="flex items-center gap-2">
-                    <div
-                      class="flex items-center justify-center px-2 h-8 bg-white rounded-md border border-border shadow-sm">
-                      <span class="text-[10px] font-bold text-red-600">M-Pesa</span>
-                    </div>
-                    <div
-                      class="flex items-center justify-center px-2 h-8 bg-white rounded-md border border-border shadow-sm">
-                      <span class="text-[10px] font-bold text-orange-500">e-Mola</span>
-                    </div>
-                    <div
-                      class="flex items-center justify-center px-2 h-8 bg-white rounded-md border border-border shadow-sm">
-                      <span class="text-[10px] font-bold text-blue-700">VISA</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-wrap justify-center gap-4 mb-6">
-                <div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-lock w-4 h-4 text-accent">
-                    <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                    <path d="M7 
-11V7a5 5 0 0 1 10 0v4"></path>
-                  </svg><span class="text-sm text-foreground">Pagamento seguro</span>
-                </div>
-                <div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 
-0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-zap w-4 h-4 text-accent">
-                    <path d="M4 14a1 1 0 
-0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 
-10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
-                  </svg><span class="text-sm text-foreground">Acesso imediato</span>
-                </div>
-                <div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-heart w-4 h-4 text-accent">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 
-
-0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 
-7Z"></path>
-                  </svg><span class="text-sm text-foreground">Conteúdo transformador</span>
-                </div>
-              </div>
-              <div class="pt-4 border-t border-border">
-                <a href="https://wa.link/txu8rc?utm_source=organic&amp;utm_campaign=&amp;utm_medium=
-&amp;utm_content=&amp;utm_term=" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-message-circle w-4 h-4">
-                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
-                  </svg><span>Tens dúvidas? Fala conosco no WhatsApp</span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-16 bg-secondary/30 relative overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-accent/5 rounded-full blur-3xl">
-          </div>
-        </div>
-        <div class="container px-4 relative z-10">
-          <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-10">
-              <div
-                class="inline-flex items-center justify-center w-20 h-20 bg-gradient-gold rounded-full shadow-glow mb-4 relative">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-shield w-10 h-10 text-primary-foreground">
-                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 
-4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 
-5a1 1 0 0 1 1 1z"></path>
-                </svg>
-                <div
-                  class="absolute -bottom-1 -right-1 w-7 h-7 bg-accent rounded-full flex items-center justify-center border-2 border-card">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-circle-check-big w-4 h-4 text-primary-foreground">
-                    <path d="M21.801 
-10A10 10 0 1 1 17 3.335"></path>
-                    <path d="m9 11 3 3L22 4"></path>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="text-2xl md:text-3xl font-heading font-semibold text-foreground mb-2">
-                Garantia de
-                <span class="text-gradient-gold">Satisfação Total</span>
-              </h3>
-              <p class="text-muted-foreground max-w-lg mx-auto">
-                Se não sentires transformação na tua vida espiritual nos
-                primeiros 7 dias, devolvemos 100% do teu dinheiro. Sem
-                perguntas.
-              </p>
-            </div>
-            <div class="flex flex-wrap justify-center gap-4">
-              <div
-                class="inline-flex items-center gap-2 px-4 py-3 bg-card rounded-full border border-accent/20 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 
-0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-zap w-4 h-4 text-accent">
-                  <path d="M4 14a1 1 0 
-0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 
-10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
-                </svg><span class="text-sm text-foreground">Acesso imediato após confirmação</span>
-              </div>
-              <div
-                class="inline-flex items-center gap-2 px-4 py-3 bg-card rounded-full border border-accent/20 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 
-0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-smartphone w-4 h-4 text-accent">
-                  <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
-                  <path d="M12 
-18h.01"></path>
-                </svg><span class="text-sm text-foreground">Funciona no telemóvel</span>
-              </div>
-              <div
-                class="inline-flex items-center gap-2 px-4 py-3 bg-card rounded-full border border-accent/20 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-lock w-4 h-4 text-accent">
-                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg><span class="text-sm text-foreground">Simples, prático e discreto</span>
-              </div>
-            </div>
-            <div class="mt-8 text-center">
-              <p class="text-sm text-accent font-medium">
-                ✨ Risco zero — A tua satisfação é a nossa prioridade
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-24 bg-background">
-        <div class="container px-4">
-          <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-16">
-              <span class="text-4xl mb-4 block">❓</span>
-              <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-foreground mb-4">
-                Perguntas Frequentes
-              </h2>
-              <div class="w-16 h-1 bg-gradient-sage mx-auto rounded-full"></div>
-            </div>
-            <div class="space-y-4">
-              <div class="bg-card rounded-2xl border border-border px-6 shadow-card transition-shadow">
-                <button
-                  class="flex flex-1 w-full items-center justify-between text-left text-lg font-heading font-medium text-foreground py-6 gap-4">
-                  Preciso ser religioso(a)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 
-6-6"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="bg-card rounded-2xl border border-border px-6 shadow-card transition-shadow">
-                <button
-                  class="flex flex-1 w-full items-center justify-between text-left text-lg font-heading font-medium text-foreground py-6 gap-4">
-                  Preciso de muito tempo por dia?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 
-6-6"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="bg-card rounded-2xl border border-border px-6 shadow-card transition-shadow">
-                <button
-                  class="flex flex-1 w-full items-center justify-between text-left text-lg font-heading font-medium text-foreground py-6 gap-4">
-                  Funciona mesmo se eu estiver afastado(a) da fé?<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 6-6"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="bg-card rounded-2xl border border-border px-6 shadow-card transition-shadow">
-                <button
-                  class="flex flex-1 w-full items-center justify-between text-left text-lg font-heading font-medium text-foreground py-6 gap-4">
-                  Posso acessar pelo celular?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 
-6-6"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="bg-card rounded-2xl border border-border px-6 shadow-card transition-shadow">
-                <button
-                  class="flex flex-1 w-full items-center justify-between text-left text-lg font-heading font-medium text-foreground py-6 gap-4">
-                  E se eu não gostar do programa?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 
-6-6"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="bg-card rounded-2xl border border-border px-6 shadow-card transition-shadow">
-                <button
-                  class="flex flex-1 w-full items-center justify-between text-left text-lg font-heading font-medium text-foreground py-6 gap-4">
-                  Como funciona o pagamento?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 
-6-6"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="bg-card rounded-2xl border border-border px-6 shadow-card transition-shadow">
-                <button
-                  class="flex flex-1 w-full items-center justify-between text-left text-lg font-heading font-medium text-foreground py-6 gap-4">
-                  Quanto tempo tenho acesso ao conteúdo?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 
-6-6"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="bg-card rounded-2xl border border-border px-6 shadow-card transition-shadow">
-                <button
-                  class="flex flex-1 w-full items-center justify-between text-left text-lg font-heading font-medium text-foreground py-6 gap-4">
-                  Posso partilhar com familiares?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 
-6-6"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="bg-card rounded-2xl border border-border px-6 shadow-card transition-shadow">
-                <button
-                  class="flex flex-1 w-full items-center justify-between text-left text-lg font-heading font-medium text-foreground py-6 gap-4">
-                  O app funciona offline?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 
-6-6"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="bg-card rounded-2xl border border-border px-6 shadow-card transition-shadow">
-                <button
-                  class="flex flex-1 w-full items-center justify-between text-left text-lg font-heading font-medium text-foreground py-6 gap-4">
-                  Preciso de algum conhecimento bíblico?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 
-6-6"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-24 relative overflow-hidden">
-        <div class="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1200&amp;q=30
-" alt="" class="w-full h-full object-cover opacity-20" />
-          <div class="absolute inset-0 bg-card/80"></div>
-        </div>
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl">
-          </div>
-        </div>
-        <div class="container px-4 relative z-10">
-          <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-foreground mb-6">
-              A tua jornada pode começar
-              <span class="text-gradient-gold">hoje</span>
-            </h2>
-            <p class="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed">
-              Não deixes para amanhã o cuidado da tua vida espiritual.
+            <p class="description">
+                Descubra com quem ele(a) conversa... Acesse fotos, vídeos e até mensagens apagadas e veja onde ele(a)
+                está em tempo real.
             </p>
-            <p class="text-lg md:text-xl text-foreground font-medium mb-10">
-              Os próximos 21 dias podem marcar um novo capítulo na tua fé.
-            </p>
-            <div class="w-full px-4 sm:w-auto sm:px-0">
-              <a href="https://pay.lojou.app/p/rbKkN?utm_source=organic&amp;utm_campaign=&amp;utm_m
-edium=&amp;utm_content=&amp;utm_term="
-                class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-semibold sm:py-6 rounded-full shadow-[0_0_20px_hsl(38_90%_65%/0.3)] hover:shadow-[0_0_40px_hsl(38_90%_65%/0.5)] hover:scale-105 animate-pulse-glow text-center min-h-14 px-6 sm:px-10 py-4 text-base sm:text-lg group w-full sm:w-auto flex items-center justify-center transition-all duration-300"><span
-                  class="text-center">✨ Quero iniciar os meus 21 dias de fé agora</span><svg
-                  class="w-5 h-5 transition-transform group-hover:translate-x-1 shrink-0" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 
-24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 
-0l-4 4m4-4H3"></path>
-                </svg></a>
+
+            <div class="secure-badge">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                </svg>
+                <span>100% SEGURO & INVISÍVEL</span>
             </div>
-            <div class="mt-8">
-              <p class="text-sm text-muted-foreground">
-                Acesso imediato após a confirmação. Funciona no telemóvel.
-                Simples, prático e discreto.
-              </p>
+
+            <p class="question-text">Deseja investigar seu PARCEIRO?</p>
+
+            <button onclick="salvarEscolha('ele')" class="btn">Quero investigar meu PARCEIRO (Homem)</button>
+            <button onclick="salvarEscolha('ela')" class="btn" style="background-color: var(--secondary-color);">Quero
+                investigar minha PARCEIRA (Mulher)</button>
+        </div>
+
+        <div class="count-box">
+            <div class="count-number" id="user-count">3.466</div>
+            <div class="count-text">Números do WhatsApp investigados</div>
+        </div>
+
+        <div style="text-align: center; margin: 24px 0; font-size: 13px; color: var(--text-secondary);">
+            <div>Ferramenta atualizada: <strong id="current-date-display" style="color: var(--text-color);"></strong>
             </div>
-          </div>
         </div>
-      </section>
-      <footer class="py-8 bg-background border-t border-border">
-        <div class="container px-4">
-          <div class="text-center">
-            <p class="text-sm text-muted-foreground">
-              © 2026 21 Dias de Limpeza Espiritual do Arcanjo Miguel. Todos
-              os direitos reservados.
-            </p>
-          </div>
+
+        <div class="disclaimer">
+            <p>Este site não tem qualquer vínculo com o Facebook ou qualquer entidade ligada ao Facebook. Assim que você
+                sair do Facebook, a responsabilidade passa a ser nossa.</p>
         </div>
-      </footer>
-      <a href="https://wa.link/txu8rc?utm_source=organic&amp;utm_campaign=&amp;utm_medium=
-&amp;utm_content=&amp;utm_term=" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 z-50 group"
-        aria-label="Fale conosco no WhatsApp">
-        <div class="relative">
-          <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-25"></div>
-          <div
-            class="relative w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-message-circle w-7 h-7 text-white">
-              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
-            </svg>
-          </div>
-          <div
-            class="absolute right-16 top-1/2 -translate-y-1/2 bg-card border border-border rounded-lg px-3 py-2 shadow-soft opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
-            <p class="text-sm font-medium text-foreground">
-              Dúvidas? Fale conosco
-            </p>
-          </div>
-        </div>
-      </a>
-    </main>
-    <div
-      class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
-      <div
-        class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
-      </div>
     </div>
-  </div>
 
+    <footer class="footer">
+        <p>© <span id="current-year"></span> - Centro Digital | Detective Pro</p>
+    </footer>
 
+    <script>
+        // FASTER Continuous Counter
+        function startContinuousCounter(element) {
+            let current = parseInt(localStorage.getItem('spyGlobalCounter')) || 3466;
+            element.textContent = current.toLocaleString('pt-BR');
+
+            const loop = () => {
+                // Interval: 200ms to 1500ms (Much faster)
+                const delay = Math.floor(Math.random() * 1300) + 200;
+
+                setTimeout(() => {
+                    const jump = Math.random() > 0.7 ? 2 : 1;
+                    current += jump;
+
+                    element.textContent = current.toLocaleString('pt-BR');
+                    localStorage.setItem('spyGlobalCounter', current);
+
+                    // Subtle pulse
+                    element.style.transition = "transform 0.1s";
+                    element.style.transform = "scale(1.05)";
+                    setTimeout(() => element.style.transform = "scale(1)", 100);
+
+                    loop();
+                }, delay);
+            };
+
+            loop();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const userCountEl = document.getElementById('user-count');
+            startContinuousCounter(userCountEl);
+
+            const today = new Date();
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            let dateString = today.toLocaleDateString('pt-BR', dateOptions);
+            dateString = dateString.charAt(0).toUpperCase() + dateString.slice(1);
+
+            document.getElementById('current-date-display').textContent = dateString;
+            document.getElementById('current-year').textContent = today.getFullYear();
+            document.getElementById('current-year').textContent = today.getFullYear();
+        });
+
+        // Click Interception and Redirect Logic
+        function salvarEscolha(genero) {
+            localStorage.setItem('spyTargetGender', genero);
+
+            // Redirect preserving UTM parameters
+            const currentParams = window.location.search;
+            window.location.href = './page1.html' + currentParams;
+        }
+    </script>
 </body>
 
 </html>
